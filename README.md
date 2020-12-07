@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Dogs | Rede social para cães
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto de conclusão do curso React Completo da Origamid
 
 ## Available Scripts
 
