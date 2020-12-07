@@ -6,12 +6,17 @@
 
 body {
     margin: 0;
+    padding: 4rem 0;
     color: $black;
     font-family: $type-first;
 }
 
 h1, h2, h3, h4, p {
     margin: 0px;
+}
+
+a {
+    text-decoration: none;
 }
 
 ul, li {

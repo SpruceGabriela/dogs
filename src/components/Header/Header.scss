@@ -1,0 +1,37 @@
+@import '../../style/variables.scss';
+
+.header {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: white;
+
+    &__nav {
+        height: 4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        padding: 0.5rem 0;
+    }
+
+    &__login {
+        color: $black;
+        display: flex;
+        align-items: center;
+
+        &::after {
+            content: '';
+            width: 14px;
+            height: 17px;
+            background: url('../../assets/usuario.svg') no-repeat center center;
+            margin-left: 0.5rem;
+            position: relative;
+            top: -1px;
+        }
+    }
+}
