@@ -1,0 +1,25 @@
+@import '../../../style/variables.scss';
+
+.button {
+    font-size: 1rem;
+    font-family: $type-first;
+    cursor: pointer;
+    border: none;
+    border-radius: .4rem;
+    background-color: $primary-color;
+    color: $text-yellow-dark;
+    padding: 0.8rem 1.2rem;
+    box-sizing: border-box;
+    min-width: 8rem;
+    transition: .1s;
+
+    &:hover, &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px $secundary-color, 0 0 0 4px $primary-color;
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: wait;
+    }
+}

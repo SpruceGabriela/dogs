@@ -1,0 +1,36 @@
+@import '../../../style/variables.scss';
+
+.input {
+    border: 1px solid #EEE;
+    display: block;
+    width: 100%;
+    font-size: 1rem;
+    padding: .8rem;
+    border-radius: .4rem;
+    background-color: #EEE;
+    transition: .2s;
+
+    &:hover, &:focus {
+        outline: none;
+        border-color: $primary-color;
+        background-color: white;
+        box-shadow: 0 0 0 3px $secundary-color;
+    }
+
+    &__wrapper {
+        margin-bottom: 1rem;
+    }
+
+    &__label {
+        display: block;
+        font-size: 1rem;
+        line-height: 1rem;
+        padding-bottom: .5rem;
+    }
+
+    &__error {
+        color: $error-color;
+        font-size: .875rem;
+        margin-top: .25rem;
+    }
+}
