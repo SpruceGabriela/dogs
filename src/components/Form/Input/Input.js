@@ -2,20 +2,22 @@ import React from 'react';
 
 import './Input.scss';
 
-const Input = (props) => {
+const Input = ({ label, type, name, value, onChange, error, onBlur }) => {
     return (
         <div className="input__wrapper">
-            <label className="input__label">
-                {props.label}
+            <label className="input__label" htmlFor={name}>
+                {label}
             </label>
             <input
                 className="input"
-                type={props.type}
-                name={props.name}
-                value={props.value}
-                onChange={props.onChange}
+                id={name}
+                type={type}
+                name={name}
+                value={value}
+                onChange={onChange}
+                onBlur={onBlur}
             />
-            <p className="input__error">Erro</p>
+            {error && <p className="input__error">{ error }</p>}
         </div>
     )
 }

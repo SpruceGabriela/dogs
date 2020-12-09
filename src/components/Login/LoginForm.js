@@ -3,30 +3,32 @@ import { Link } from 'react-router-dom';
 
 import Input from '../Form/Input/Input';
 import Button from '../Form/Button/Button';
+import useForm from '../../hooks/useForm';
 
 const LoginForm = () => {
-    const [userName, setUserName] = React.useState('');
-    const [password, setPassword] = React.useState('');
+    const username = useForm();
+    const password = useForm();
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        
-        fetch('https://dogsapi.origamid.dev/json/jwt-auth/v1/token', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                username: userName,
-                password: password
+
+        if(username.validate() && password.validate()) {
+            fetch('https://dogsapi.origamid.dev/json/jwt-auth/v1/token', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    
+                })
             })
-        })
-        .then((response) => {
-            return response.json();
-        })
-        .then((json) => {
-            console.log(json)
-        })
+            .then((response) => {
+                return response.json();
+            })
+            .then((json) => {
+                console.log(json)
+            })
+        }
     }
 
     return (
@@ -37,15 +39,13 @@ const LoginForm = () => {
                     label="Usuário"
                     type="text"
                     name="username"
-                    value={userName}
-                    onChange={({ target }) => setUserName(target.value)}
+                    {...username}
                 />
                 <Input
                     label="Senha"
                     type="password"
                     name="password"
-                    value={password}
-                    onChange={({ target }) => setPassword(target.value)}
+                    {...password}
                 />
                 <Button>Entrar</Button>
            </form>
