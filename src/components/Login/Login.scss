@@ -1,0 +1,76 @@
+@import '../../style/variables.scss';
+@import '../../style/mixins.scss';
+
+.login {
+    margin-top: 4rem;
+
+    p {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        min-height: 100vh;
+        gap: 2rem;
+
+        &::before {
+            content: '';
+            display: block;
+            background: url('../../assets/login.jpg') no-repeat center center;
+            background-size: cover;
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &__forms {
+        max-width: 30rem;
+        padding: 1rem;
+
+        @include mobile {
+            max-width: 100%;
+        }
+    }
+
+    &__subtitle {
+        font-family: $type-second;
+        line-height: 1;
+        font-size: 2rem;
+
+        &::after {
+            content: '';
+            height: 0.5rem;
+            width: 3rem;
+            border-radius: .2rem;
+            background-color: #ddd;
+            display: block;
+        }
+    }
+}
+
+.form {
+    margin-bottom: 2rem;
+}
+
+.retrieve {
+    display: inline-block;
+    color: $gray;
+    padding: 0.5rem 0;
+    line-height: 1;
+
+    &::after {
+        content: '';
+        height: 2px;
+        width: 100%;
+        background-color: currentColor;
+        display: block;
+    }
+}
