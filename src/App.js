@@ -6,9 +6,11 @@ import Footer from './components/Footer/Footer';
 
 import Login from './components/Login/Login';
 import Home from './components/Home/Home';
+import User from './components/User/User';
 
 import { UserStorage } from './UserContext';
 
+import ProtectedRoute from './helper/ProtectedRoute';
 import './style/App.scss'
 
 const App = () => {
@@ -19,7 +21,8 @@ const App = () => {
           <Header />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/login/*" element={<Login />} />
+            <Route path="login/*" element={<Login />} />
+            <ProtectedRoute path="account/*" element={<User />} />
           </Routes>
           <Footer />
         </UserStorage>
