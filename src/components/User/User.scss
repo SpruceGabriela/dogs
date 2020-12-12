@@ -1,0 +1,49 @@
+@import '../../style/variables.scss';
+
+.user__header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.user__nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+
+    a, button {
+        background-color: #EEE;
+        border-radius: .2rem;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid transparent;
+        transition: .1s;
+        cursor: pointer;
+    }
+
+    a:hover,
+    a:focus,
+    button:hover,
+    button:focus {
+          background-color: white;
+          box-shadow: 0 0 0 3px #EEE;
+          border-color: $black;
+          outline: none;
+    }
+
+    a.active {
+        background-color: white;
+        box-shadow: 0 0 0 3px $secundary-color;
+        border-color: $primary-color;
+
+        svg > * {
+            fill: $primary-color;
+        }
+    }
+}
