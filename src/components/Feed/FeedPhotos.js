@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Error from "../../helper/Error/Error";
-import Loading from '../Loading/Loading';
+import Loading from '../../helper/Loading/Loading';
 import FeedPhotosItem from './FeedPhotosItem';
 import { PHOTOS_GET } from '../../api';
 import UseFetch from '../../hooks/useFetch';
