@@ -2,7 +2,7 @@ import React from 'react';
 
 import useFetch from '../../hooks/useFetch';
 import Loading from '../Loading/Loading';
-import  Error from '../Error/Error';
+import  Error from '../../helper/Error/Error';
 import { PHOTO_GET } from '../../api';
 import PhotoContent from '../Photo/PhotoContent';
 

@@ -5,6 +5,7 @@ import PhotoComments from './PhotoComments';
 import './Photo.scss';
 import { UserContext } from '../../UserContext';
 import PhotoDelete from './PhotoDelete';
+import Shimmer from '../../helper/Shimmer/Shimmer';
 
 const PhotoContent = (props) => {
     const { photo, comments } = props.data;
@@ -13,7 +14,7 @@ const PhotoContent = (props) => {
     return (
         <div className="photo">
              <div className="photo__img">
-                 <img src={photo.src} alt={photo.title} />
+                 <Shimmer src={photo.src} alt={photo.title} />
             </div>
             <div className="photo__details">
                 <div>

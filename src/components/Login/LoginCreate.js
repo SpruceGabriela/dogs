@@ -3,7 +3,7 @@ import React from 'react';
 import useForm from '../../hooks/useForm';
 import Input from '../Form/Input/Input';
 import Button from '../Form/Button/Button';
-import Error from '../Error/Error';
+import Error from '../../helper/Error/Error';
 
 import { USER_POST } from '../../api';
 import { UserContext } from '../../UserContext';

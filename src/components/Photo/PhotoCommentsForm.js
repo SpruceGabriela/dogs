@@ -1,7 +1,7 @@
 import React from 'react';
 
 import useFetch from '../../hooks/useFetch';
-import Error from '../Error/Error';
+import Error from '../../helper/Error/Error';
 import { ReactComponent as Send } from '../../assets/enviar.svg';
 
 import { COMMENT_POST } from '../../api';

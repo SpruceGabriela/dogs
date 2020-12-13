@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import Input from '../Form/Input/Input';
 import Button from '../Form/Button/Button';
 import useForm from '../../hooks/useForm';
-import Error from '../Error/Error';
+import Error from '../../helper/Error/Error';
 
 import { UserContext } from '../../UserContext';
 

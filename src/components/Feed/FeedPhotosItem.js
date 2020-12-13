@@ -1,4 +1,5 @@
 import React from 'react';
+import Shimmer from '../../helper/Shimmer/Shimmer';
 
 const FeedPhotosItem = (props) => {
     const handleClick = () => {
@@ -7,7 +8,7 @@ const FeedPhotosItem = (props) => {
 
     return (
         <li className="feed-photos__item" onClick={handleClick}>
-            <img src={props.photo.src} alt={props.photo.title}/>
+            <Shimmer src={props.photo.src} alt={props.photo.title} />
             <span className="feed-photos__item-visible">{props.photo.acessos}</span>
         </li>
     )
