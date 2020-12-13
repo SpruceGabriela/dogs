@@ -76,6 +76,83 @@
             }
         }
     }
+
+    &__comments {
+        overflow-y: auto;
+        word-break: break-word;
+        padding: 0 2rem;
+
+        li {
+            margin-bottom: .5rem;
+            line-height: 1.2;
+        }
+
+        &-form {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            align-items: stretch;
+            margin: 1rem;
+
+            &__textarea {
+                display: block;
+                width: 100%;
+                font-size: 1rem;
+                font-family: $type-first;
+                resize: none;
+                border: 1px solid #eee;
+                padding: .5rem;
+                border-radius: .2rem;
+                background-color: #eee;
+                transition: .2s;
+
+                &:focus,
+                &:hover {
+                    outline: none;
+                    border-color: #fb1;
+                    background: white;
+                    box-shadow: 0 0 0 3px #fea;
+                }
+            }
+
+            &__send {
+                border: none;
+                cursor: pointer;
+                color: #333;
+                background-color: transparent;
+                font-size: 1rem;
+                padding: 0 1rem;
+                overflow: hidden;
+
+                &:focus,
+                &:hover {
+                    outline: none;
+                }
+
+                &:focus,
+                &:hover {
+                    svg path {
+                        fill: #FEA;
+                        stroke: #FB1;
+                    }
+                }
+
+                &:focus,
+                &:hover {
+                    svg g {
+                        animation: woof .6s infinite;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes woof {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 64rem) {
@@ -84,9 +161,9 @@
         max-width: calc(100vh - 4rem);
         overflow-y: auto;
         grid-template-columns: minmax(20rem, 40rem);
-    }
 
-    &__img {
-        grid-row: 1;
+        &__img {
+            grid-row: 1;
+        }
     }
 }
