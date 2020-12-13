@@ -24,6 +24,26 @@
         padding: 2rem 2rem 0 2rem;
     }
 
+    &__delete {
+        background-color: #ddd;
+        padding: .3rem .6rem;
+        line-height: 1;
+        border: 1px transparent;
+        font-size: .875rem;
+        font-family: $type-first;
+        cursor: pointer;
+        border-radius: .4rem;
+        transition: .1s;
+
+        &:focus,
+        &:hover {
+            outline: none;
+            background-color: white;
+            box-shadow: 0 0 0 3px #eee;
+            border-color: #333;
+        }
+    }
+
     &__img {
         grid-row: 1 / 4;
     }
