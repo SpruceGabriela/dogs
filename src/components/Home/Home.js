@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Feed from '../../helper/Error/Error';
+import Feed from '../Feed/Feed';
 import './Home.scss';
 
 const Home = () => {
