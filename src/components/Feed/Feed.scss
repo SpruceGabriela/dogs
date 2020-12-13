@@ -1,0 +1,76 @@
+@import '../../style/mixins.scss';
+
+.feed-photos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 1rem;
+    justify-items: center;
+
+    @include mobile {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__item {
+        display: grid;
+        border-radius: .2rem;
+        overflow: hidden;
+        cursor: pointer;
+
+        img {
+            grid-area: 1 / 1;
+        }
+
+        &-visible {
+            grid-area: 1 / 1;
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            font-size: 1rem;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: none;
+
+            &::before {
+                content: '';
+                width: 16px;
+                height: 10px;
+                display: inline-block;
+                margin-right: .25rem;
+                background: url('../../assets/visualizacao.svg') no-repeat;
+            }
+        }
+
+        &:nth-child(2) {
+            grid-column: 2 / 4;
+            grid-row: span 2;
+
+            @include mobile {
+                grid-column: initial;
+                grid-row: span initial;
+            }
+        }
+
+        &:hover {
+            .feed-photos__item-visible {
+                display: flex;
+            }
+        }
+    }
+
+    &__modal {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.4);
+        top: 0px;
+        left: 0px;
+        display: flex;
+        z-index: 1000;
+        padding: 2rem calc(4rem + 15px) 2rem 4rem;
+
+        @include mobile {
+            padding: 2rem calc(2rem + 15px) 2rem 2rem;
+        }
+    }
+}
