@@ -45,7 +45,7 @@ const LoginReset = () => {
     }
 
     return (
-       <div>
+       <section className="animleft">
            <Head title="Resete a senha" />
            <h1 className="title">Resete a senha</h1>
         
@@ -59,7 +59,7 @@ const LoginReset = () => {
                {loading ? <Button disabled>Resetando...</Button> : <Button>Resetar</Button>}
            </form>
            <Error error={error} />
-       </div>
+       </section>
     )
 }
 

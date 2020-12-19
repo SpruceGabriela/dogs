@@ -28,7 +28,7 @@ const LoginLost = () => {
     }
 
     return (
-       <section>
+       <section className="animleft">
            <Head title="Perdeu a Senha?" />
            <h1 className="title">Perdeu a senha?</h1>
             {data ? <p style={{color: '#4C1'}}>{data}</p> 
