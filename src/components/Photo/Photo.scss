@@ -13,6 +13,29 @@
     transform: scale(.8);
     animation: scaleUp .3s forwards;
 
+    &__single {
+        grid-template-columns: 1fr;
+        height: auto;
+
+        .photo__img {
+            grid-row: 1;
+            border-radius: .4rem;
+            overflow: hidden;
+        }
+
+        .photo__details {
+            padding: 2rem 0px 0px 0px;
+        }
+
+        .photo__comments {
+            padding: 0px;
+        }
+
+        .photo__comments-form {
+            margin: 1rem 0;
+        }
+    }
+
     @keyframes scaleUp {
         to {
             opacity: 1;
@@ -49,7 +72,7 @@
     }
 
     &__comments {
-        pad: 0 2rem;
+        padding: 0 2rem;
     }
 
     &__author {

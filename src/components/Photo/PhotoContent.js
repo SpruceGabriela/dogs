@@ -12,7 +12,7 @@ const PhotoContent = (props) => {
     const user = React.useContext(UserContext);
 
     return (
-        <div className="photo">
+        <div className={`photo ${props.single ? 'photo__single' : ''}`}>
              <div className="photo__img">
                  <Shimmer src={photo.src} alt={photo.title} />
             </div>
