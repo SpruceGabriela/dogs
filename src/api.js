@@ -128,9 +128,21 @@ export function PASSWORD_RESET(body) {
         options: {
             method: 'POST',
             headers: {
-                'Content-Type': 'application/json'
+                Authorization: 'Bearer' + window.localStorage.getItem('token')
             },
             body: JSON.stringify(body),
+        }
+    }
+}
+
+export function GET_STATS() {
+    return {
+        url: `${API_URL}/api/stats`,
+        options: {
+            method: 'GET',
+            headers: {
+                Authorization: 'Bearer' + window.localStorage.getItem('token')
+            },
         }
     }
 }
