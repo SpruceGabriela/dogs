@@ -1,8 +1,12 @@
 import React from 'react';
+import Head from '../../helper/Head';
 
 const UserStats = () => {
     return (
-        <div></div>
+        <>
+            <Head title="Estatísticas" />
+            <div></div>
+        </>
     )
 }
 
