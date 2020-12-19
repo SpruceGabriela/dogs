@@ -8,6 +8,7 @@ import UserStats from './UserStats';
 
 import './User.scss';
 import { UserContext } from '../../UserContext';
+import NotFound from '../../helper/NotFound/NotFound';
 
 const User = () => {
     const { data } = React.useContext(UserContext);
@@ -19,6 +20,7 @@ const User = () => {
                 <Route path="/" element={ <Feed user={data.id} /> } />
                 <Route path="post" element={ <PhotoPost /> } />
                 <Route path="statistcs" element={ <UserStats /> } />
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </section>
     );
